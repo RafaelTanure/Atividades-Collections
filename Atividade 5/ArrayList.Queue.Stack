@@ -1,0 +1,74 @@
+using System;
+using System.Collections;
+
+class Program {
+    static void Main(string[] args) {
+        ArrayList numeros = new ArrayList();
+        
+        // Adiciona números no intervalo de 1 a 100 ao ArrayList
+        for (int i = 1; i <= 100; i++) {
+            numeros.Add(i);
+        }
+
+        int soma = 0;
+        int index = 0;
+
+        // Calcula a soma usando o comando do-while
+        do {
+            soma += (int)numeros[index];
+            index++;
+        } while (index < numeros.Count);
+
+        Console.WriteLine("A soma dos números é: " + soma);
+    }
+}
+/*
+//Atividade 5 Queue : 
+
+using System;
+using System.Collections;
+
+class Program {
+    static void Main(string[] args) {
+        Queue numeros = new Queue();
+        
+        // Adiciona números no intervalo de 1 a 100 à Queue
+        for (int i = 1; i <= 100; i++) {
+            numeros.Enqueue(i);
+        }
+
+        int soma = 0;
+
+        // Calcula a soma usando o comando do-while
+        do {
+            soma += (int)numeros.Dequeue();
+        } while (numeros.Count > 0);
+
+        Console.WriteLine("A soma dos números é: " + soma);
+    }
+}
+
+// Atividade 5 Stack : 
+
+using System;
+using System.Collections;
+
+class Program {
+    static void Main(string[] args) {
+        Stack numeros = new Stack();
+        
+        // Adiciona números no intervalo de 1 a 100 à Stack
+        for (int i = 1; i <= 100; i++) {
+            numeros.Push(i);
+        }
+
+        int soma = 0;
+
+        // Calcula a soma usando o comando do-while
+        do {
+            soma += (int)numeros.Pop();
+        } while (numeros.Count > 0);
+
+        Console.WriteLine("A soma dos números é: " + soma);
+    }
+} */
