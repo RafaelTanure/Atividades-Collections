@@ -1,0 +1,86 @@
+using System;
+using System.Collections;
+
+class Program {
+    static void Main(string[] args) {
+        // Criando o ArrayList
+        ArrayList numeros = new ArrayList() {5, 13, 19, 31, 3, 7, 11, 5, 57, 13, 5};
+
+        // Apagando todas as ocorrências de 5 e 13
+        ApagarOcorrencias(ref numeros, 5);
+        ApagarOcorrencias(ref numeros, 13);
+
+        // Imprimindo o ArrayList atualizado
+        Console.WriteLine(string.Join(", ", numeros.ToArray()));
+    }
+
+    static void ApagarOcorrencias(ref ArrayList lista, int numero) {
+        lista.RemoveAll(n => n.Equals(numero));
+    }
+}
+/*
+//Atividade 7 Queue: 
+
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Criando a Queue
+        Queue<int> numeros = new Queue<int>(new int[] {5, 13, 19, 31, 3, 7, 11, 5, 57, 13, 5});
+
+        // Apagando todas as ocorrências de 5 e 13
+        ApagarOcorrencias(ref numeros, 5);
+        ApagarOcorrencias(ref numeros, 13);
+
+        // Imprimindo a Queue atualizada
+        Console.WriteLine(string.Join(", ", numeros.ToArray()));
+    }
+
+    static void ApagarOcorrencias(ref Queue<int> fila, int numero) {
+        int tamanhoInicial = fila.Count;
+
+        for (int i = 0; i < tamanhoInicial; i++) {
+            int elemento = fila.Dequeue();
+
+            if (!elemento.Equals(numero)) {
+                fila.Enqueue(elemento);
+            }
+        }
+    }
+}
+
+Atividade 7 Stack : 
+
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        // Criando a Stack
+        Stack<int> numeros = new Stack<int>(new int[] {5, 13, 19, 31, 3, 7, 11, 5, 57, 13, 5});
+
+        // Apagando todas as ocorrências de 5 e 13
+        ApagarOcorrencias(ref numeros, 5);
+        ApagarOcorrencias(ref numeros, 13);
+
+        // Imprimindo a Stack atualizada
+        Console.WriteLine(string.Join(", ", numeros.ToArray()));
+    }
+
+    static void ApagarOcorrencias(ref Stack<int> pilha, int numero) {
+        Stack<int> auxiliar = new Stack<int>();
+
+        while (pilha.Count > 0) {
+            int elemento = pilha.Pop();
+
+            if (!elemento.Equals(numero)) {
+                auxiliar.Push(elemento);
+            }
+        }
+
+        while (auxiliar.Count > 0) {
+            pilha.Push(auxiliar.Pop());
+        }
+    }
+} */
