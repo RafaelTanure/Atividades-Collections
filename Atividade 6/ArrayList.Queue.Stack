@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        List<int> numerosPares = new List<int>();
+        
+        // Adicionando números pares ao ArrayList
+        for (int i = 2; i <= 100; i += 2) {
+            numerosPares.Add(i);
+        }
+        
+        // Calculando a soma dos números usando foreach
+        int soma = 0;
+        foreach (int numero in numerosPares) {
+            soma += numero;
+        }
+        
+        Console.WriteLine("A soma dos números pares entre 1 e 100 é: " + soma);
+    }
+}
+/*
+//Atividade 6 Queue: 
+
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        Queue<int> numerosPares = new Queue<int>();
+        
+        // Adicionando números pares à fila
+        for (int i = 2; i <= 100; i += 2) {
+            numerosPares.Enqueue(i);
+        }
+        
+        // Calculando a soma dos números usando dequeue
+        int soma = 0;
+        while (numerosPares.Count > 0) {
+            int numero = numerosPares.Dequeue();
+            soma += numero;
+        }
+        
+        Console.WriteLine("A soma dos números pares entre 1 e 100 é: " + soma);
+    }
+}
+
+// Atividade 6 Stack: 
+
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        Stack<int> numerosPares = new Stack<int>();
+        
+        // Adicionando números pares à pilha
+        for (int i = 2; i <= 100; i += 2) {
+            numerosPares.Push(i);
+        }
+        
+        // Calculando a soma dos números usando pop
+        int soma = 0;
+        while (numerosPares.Count > 0) {
+            int numero = numerosPares.Pop();
+            soma += numero;
+        }
+        
+        Console.WriteLine("A soma dos números pares entre 1 e 100 é: " + soma);
+    }
+} */
