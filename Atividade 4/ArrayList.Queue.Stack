@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        List<int> numerosPares = new List<int>();
+        int numero = 2; // Iniciando com o primeiro número par
+        while (numero <= 100) {
+            numerosPares.Add(numero);
+            numero += 2; // Incrementando para o próximo número par
+        }
+        int soma = 0;
+        foreach (int num in numerosPares) {
+            soma += num;
+        }
+        Console.WriteLine($"A soma dos números pares de 1 a 100 é {soma}.");
+    }
+}
+
+/*
+
+// Atividade 4 Queue: 
+
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        Queue<int> numerosPares = new Queue<int>();
+        int numero = 2; // Iniciando com o primeiro número par
+        while (numero <= 100) {
+            numerosPares.Enqueue(numero);
+            numero += 2; // Incrementando para o próximo número par
+        }
+        int soma = 0;
+        while (numerosPares.Count > 0) {
+            soma += numerosPares.Dequeue();
+        }
+        Console.WriteLine($"A soma dos números pares de 1 a 100 é {soma}.");
+    }
+}
+
+//Atividade 4 Stack: 
+
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        Stack<int> numerosPares = new Stack<int>();
+        int numero = 100; // Iniciando com o último número par
+        while (numero >= 2) {
+            numerosPares.Push(numero);
+            numero -= 2; // Decrementando para o próximo número par
+        }
+        int soma = 0;
+        while (numerosPares.Count > 0) {
+            soma += numerosPares.Pop();
+        }
+        Console.WriteLine($"A soma dos números pares de 1 a 100 é {soma}.");
+    }
+} */
