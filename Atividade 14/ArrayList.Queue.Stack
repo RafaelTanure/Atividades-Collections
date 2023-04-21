@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+
+public static class UtilsColecao
+{
+    public static IEnumerable<T> InverterColecao<T>(IEnumerable<T> colecao)
+    {
+        // cria uma pilha para armazenar os elementos da coleção na ordem inversa
+        Stack<T> pilha = new Stack<T>();
+        foreach (T elemento in colecao)
+        {
+            pilha.Push(elemento);
+        }
+
+        // itera sobre a pilha para gerar uma nova coleção com os elementos invertidos
+        while (pilha.Count > 0)
+        {
+            yield return pilha.Pop();
+        }
+    }
+}
+
+class Programa
+{
+    static void Main(string[] args)
+    {
+        List<int> numeros = new List<int> { 1, 2, 3, 4, 5 };
+        IEnumerable<int> invertidos = UtilsColecao.InverterColecao(numeros);
+
+        foreach (int numero in invertidos)
+        {
+            Console.WriteLine(numero);
+        }
+    }
+}
