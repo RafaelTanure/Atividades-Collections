@@ -1,0 +1,71 @@
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ArrayList myList = new ArrayList() { 1, 2, 3.14, true, "teste" };
+
+        double sum = 0;
+        foreach (var item in myList)
+        {
+            sum += (double)item;
+        }
+
+        Console.WriteLine("A soma dos elementos é: " + sum);
+    }
+}
+/*
+
+// Atividade 11 Queue:
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Queue myQueue = new Queue();
+        myQueue.Enqueue(1);
+        myQueue.Enqueue(2);
+        myQueue.Enqueue(3.14);
+        myQueue.Enqueue(true);
+        myQueue.Enqueue("teste");
+
+        double sum = 0;
+        foreach (var item in myQueue)
+        {
+            sum += (double)item;
+        }
+
+        Console.WriteLine("A soma dos elementos é: " + sum);
+    }
+}
+
+// Atividade 11 Stack : 
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Stack myStack = new Stack();
+        myStack.Push(1);
+        myStack.Push(2);
+        myStack.Push(3.14);
+        myStack.Push(true);
+        myStack.Push("teste");
+
+        double sum = 0;
+        foreach (var item in myStack)
+        {
+            sum += (double)item;
+        }
+
+        Console.WriteLine("A soma dos elementos é: " + sum);
+    }
+} */
