@@ -1,0 +1,112 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Stack<int> numeros = new Stack<int>();
+        int n, num, soma = 0;
+
+        Console.Write("Digite a quantidade de números que deseja inserir: ");
+        n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write("Digite o número {0}: ", i + 1);
+            num = int.Parse(Console.ReadLine());
+            numeros.Push(num);
+            soma += num;
+        }
+
+        double media = (double)soma / n;
+
+        Console.WriteLine("\nValores inseridos no Stack:");
+
+        foreach (int valor in numeros)
+        {
+            Console.WriteLine(valor);
+        }
+
+        Console.WriteLine("\nSoma: {0}", soma);
+        Console.WriteLine("Média: {0}", media.ToString("F2"));
+    }
+}
+/*
+
+// Atividade 10 Queue: 
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Queue<int> numeros = new Queue<int>();
+        int n, num, soma = 0;
+
+        Console.Write("Digite a quantidade de números que deseja inserir: ");
+        n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write("Digite o número {0}: ", i + 1);
+            num = int.Parse(Console.ReadLine());
+            numeros.Enqueue(num);
+            soma += num;
+        }
+
+        double media = (double)soma / n;
+
+        Console.WriteLine("\nValores inseridos na Queue:");
+
+        foreach (int valor in numeros)
+        {
+            Console.WriteLine(valor);
+        }
+
+        Console.WriteLine("\nSoma: {0}", soma);
+        Console.WriteLine("Média: {0}", media.ToString("F2"));
+    }
+}
+
+//Atividade 10 Stack: 
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Stack<int> numeros = new Stack<int>();
+        int n, num, soma = 0;
+
+        Console.Write("Digite a quantidade de números que deseja inserir: ");
+        n = int.Parse(Console.ReadLine());
+
+        int i = 0;
+        while (i < n)
+        {
+            Console.Write("Digite o número {0}: ", i + 1);
+            num = int.Parse(Console.ReadLine());
+            numeros.Push(num);
+            soma += num;
+            i++;
+        }
+
+        double media = (double)soma / n;
+
+        Console.WriteLine("\nValores inseridos no Stack:");
+
+        while (numeros.Count > 0)
+        {
+            Console.WriteLine(numeros.Pop());
+        }
+
+        Console.WriteLine("\nSoma: {0}", soma);
+        Console.WriteLine("Média: {0}", media.ToString("F2"));
+    }
+}
+*/
