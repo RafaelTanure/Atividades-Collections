@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+
+class Program {
+    static void Main(string[] args) {
+        Queue queue = new Queue();
+
+        for (int i = 1; i <= 10; i++) {
+            Console.Write("Informe o valor {0}: ", i);
+            int valor = int.Parse(Console.ReadLine());
+            queue.Enqueue(valor);
+        }
+
+        Console.WriteLine("\nAqui estão os Valores digitados: ");
+        foreach (int valor in queue) {
+            Console.WriteLine(valor);
+        }
+    }
+}
