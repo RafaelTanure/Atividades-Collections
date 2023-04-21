@@ -1,0 +1,70 @@
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ArrayList list = new ArrayList();
+
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.Write($"Digite a {i}ª string: ");
+            string input = Console.ReadLine();
+            list.Add(input);
+        }
+
+        Console.WriteLine("\nElementos do ArrayList:");
+        foreach (string item in list)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
+
+//Atividade 3 Queue: 
+
+/*
+using System;
+using System.Collections;
+
+class Program {
+    static void Main(string[] args) {
+        Queue queue = new Queue();
+
+        for (int i = 1; i <= 10; i++) {
+            Console.Write($"Digite a {i}ª string: ");
+            string input = Console.ReadLine();
+            queue.Enqueue(input);
+        }
+
+        Console.WriteLine("\nElementos da Queue:");
+        while (queue.Count > 0) {
+            string item = (string) queue.Dequeue();
+            Console.WriteLine(item);
+        }
+    }
+}
+
+//Atividade 3 Stack: 
+
+using System;
+using System.Collections;
+
+class Program {
+    static void Main(string[] args) {
+        Stack stack = new Stack();
+
+        for (int i = 1; i <= 10; i++) {
+            Console.Write($"Digite a {i}ª string: ");
+            string input = Console.ReadLine();
+            stack.Push(input);
+        }
+
+        Console.WriteLine("\nElementos da Stack:");
+        while (stack.Count > 0) {
+            string item = (string) stack.Pop();
+            Console.WriteLine(item);
+        }
+    }
+} */
