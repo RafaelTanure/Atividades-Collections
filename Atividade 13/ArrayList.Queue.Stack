@@ -1,0 +1,81 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Informe a quantidade de números aleatórios a serem gerados:");
+        int n = int.Parse(Console.ReadLine());
+
+        Random r = new Random();
+        int[] numeros = new int[n];
+
+        for (int i = 0; i < n; i++)
+        {
+            numeros[i] = r.Next();
+        }
+
+        Console.WriteLine("Coleção de números aleatórios:");
+        foreach (int numero in numeros)
+        {
+            Console.WriteLine(numero);
+        }
+    }
+}
+/*
+
+// Atividade 13 Queue: 
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Informe a quantidade de números aleatórios a serem gerados:");
+        int n = int.Parse(Console.ReadLine());
+
+        Random r = new Random();
+        Queue numeros = new Queue();
+
+        for (int i = 0; i < n; i++)
+        {
+            numeros.Enqueue(r.Next());
+        }
+
+        Console.WriteLine("Coleção de números aleatórios:");
+        while (numeros.Count > 0)
+        {
+            Console.WriteLine(numeros.Dequeue());
+        }
+    }
+}
+
+// Atividade 13 Stack: 
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Informe a quantidade de números aleatórios a serem gerados:");
+        int n = int.Parse(Console.ReadLine());
+
+        Random r = new Random();
+        Stack numeros = new Stack();
+
+        for (int i = 0; i < n; i++)
+        {
+            numeros.Push(r.Next());
+        }
+
+        Console.WriteLine("Coleção de números aleatórios:");
+        while (numeros.Count > 0)
+        {
+            Console.WriteLine(numeros.Pop());
+        }
+    }
+} */
