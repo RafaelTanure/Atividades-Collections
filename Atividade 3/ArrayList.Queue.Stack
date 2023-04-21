@@ -5,44 +5,51 @@ class Program
 {
     static void Main(string[] args)
     {
-        ArrayList list = new ArrayList();
+        ArrayList numerosImpares = new ArrayList();
 
-        for (int i = 1; i <= 10; i++)
+        // Adiciona os números ímpares ao ArrayList
+        for (int i = 1; i <= 100; i++)
         {
-            Console.Write($"Digite a {i}ª string: ");
-            string input = Console.ReadLine();
-            list.Add(input);
+            if (i % 2 != 0)
+            {
+                numerosImpares.Add(i);
+            }
         }
 
-        Console.WriteLine("\nElementos do ArrayList:");
-        foreach (string item in list)
+        // Calcula a soma dos números ímpares usando um loop for
+        int soma = 0;
+        for (int i = 0; i < numerosImpares.Count; i++)
         {
-            Console.WriteLine(item);
+            soma += (int)numerosImpares[i];
         }
+
+        Console.WriteLine("A soma dos números ímpares entre 1 e 100 é: " + soma);
     }
 }
 
 //Atividade 3 Queue: 
 
-/*
-using System;
+/*using System;
 using System.Collections;
 
 class Program {
     static void Main(string[] args) {
-        Queue queue = new Queue();
+        Queue numerosImpares = new Queue();
 
-        for (int i = 1; i <= 10; i++) {
-            Console.Write($"Digite a {i}ª string: ");
-            string input = Console.ReadLine();
-            queue.Enqueue(input);
+        // Adiciona os números ímpares à Queue
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                numerosImpares.Enqueue(i);
+            }
         }
 
-        Console.WriteLine("\nElementos da Queue:");
-        while (queue.Count > 0) {
-            string item = (string) queue.Dequeue();
-            Console.WriteLine(item);
+        // Calcula a soma dos números ímpares usando um loop while
+        int soma = 0;
+        while (numerosImpares.Count > 0) {
+            soma += (int)numerosImpares.Dequeue();
         }
+
+        Console.WriteLine("A soma dos números ímpares entre 1 e 100 é: " + soma);
     }
 }
 
@@ -53,18 +60,21 @@ using System.Collections;
 
 class Program {
     static void Main(string[] args) {
-        Stack stack = new Stack();
+        Stack numerosImpares = new Stack();
 
-        for (int i = 1; i <= 10; i++) {
-            Console.Write($"Digite a {i}ª string: ");
-            string input = Console.ReadLine();
-            stack.Push(input);
+        // Adiciona os números ímpares à Stack
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                numerosImpares.Push(i);
+            }
         }
 
-        Console.WriteLine("\nElementos da Stack:");
-        while (stack.Count > 0) {
-            string item = (string) stack.Pop();
-            Console.WriteLine(item);
+        // Calcula a soma dos números ímpares usando um loop while
+        int soma = 0;
+        while (numerosImpares.Count > 0) {
+            soma += (int)numerosImpares.Pop();
         }
+
+        Console.WriteLine("A soma dos números ímpares entre 1 e 100 é: " + soma);
     }
 } */
