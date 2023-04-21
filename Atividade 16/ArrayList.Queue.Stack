@@ -1,0 +1,157 @@
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ArrayList colecao = new ArrayList();
+
+        Console.WriteLine("Digite os elementos da coleção (digite um valor negativo para encerrar):");
+
+        int elemento = 0;
+
+        while (elemento >= 0)
+        {
+            if (int.TryParse(Console.ReadLine(), out elemento))
+            {
+                if (elemento >= 0)
+                {
+                    colecao.Add(elemento);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido. Tente novamente.");
+            }
+        }
+
+        int contadorPositivos = ContarElementosPositivos(colecao);
+
+        Console.WriteLine($"A coleção possui {contadorPositivos} elementos positivos.");
+
+        Console.ReadLine();
+    }
+
+    static int ContarElementosPositivos(ArrayList colecao)
+    {
+        int contador = 0;
+
+        foreach (int elemento in colecao)
+        {
+            if (elemento > 0)
+            {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+}
+
+/*
+
+// Atividade 16 Queue: 
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Queue colecao = new Queue();
+
+        Console.WriteLine("Digite os elementos da coleção (digite um valor negativo para encerrar):");
+
+        int elemento = 0;
+
+        while (elemento >= 0)
+        {
+            if (int.TryParse(Console.ReadLine(), out elemento))
+            {
+                if (elemento >= 0)
+                {
+                    colecao.Enqueue(elemento);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido. Tente novamente.");
+            }
+        }
+
+        int contadorPositivos = ContarElementosPositivos(colecao);
+
+        Console.WriteLine($"A coleção possui {contadorPositivos} elementos positivos.");
+
+        Console.ReadLine();
+    }
+
+    static int ContarElementosPositivos(Queue colecao)
+    {
+        int contador = 0;
+
+        foreach (int elemento in colecao)
+        {
+            if (elemento > 0)
+            {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+}
+
+//Atividade 16 Stack : 
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Stack colecao = new Stack();
+
+        Console.WriteLine("Digite os elementos da coleção (digite um valor negativo para encerrar):");
+
+        int elemento = 0;
+
+        while (elemento >= 0)
+        {
+            if (int.TryParse(Console.ReadLine(), out elemento))
+            {
+                if (elemento >= 0)
+                {
+                    colecao.Push(elemento);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido. Tente novamente.");
+            }
+        }
+
+        int contadorPositivos = ContarElementosPositivos(colecao);
+
+        Console.WriteLine($"A coleção possui {contadorPositivos} elementos positivos.");
+
+        Console.ReadLine();
+    }
+
+    static int ContarElementosPositivos(Stack colecao)
+    {
+        int contador = 0;
+
+        foreach (int elemento in colecao)
+        {
+            if (elemento > 0)
+            {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+} */
