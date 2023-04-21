@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<int> numeros = new List<int>();
+        for (int i = 1; i <= 25; i++)
+        {
+            numeros.Add(i);
+        }
+
+        Console.WriteLine("Todos os elementos:");
+        for (int i = 0; i < numeros.Count; i++)
+        {
+            Console.Write(numeros[i] + " ");
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Todos os elementos em ordem invertida:");
+        for (int i = numeros.Count - 1; i >= 0; i--)
+        {
+            Console.Write(numeros[i] + " ");
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Todos os elementos em posições ímpares:");
+        for (int i = 1; i < numeros.Count; i += 2)
+        {
+            Console.Write(numeros[i] + " ");
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Todos os elementos ímpares:");
+        for (int i = 0; i < numeros.Count; i++)
+        {
+            if (numeros[i] % 2 != 0)
+            {
+                Console.Write(numeros[i] + " ");
+            }
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Apenas os elementos da primeira metade do vetor:");
+        for (int i = 0; i < numeros.Count / 2; i++)
+        {
+            Console.Write(numeros[i] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+/*
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main(string[] args) {
+        List<int> numeros = new List<int>();
+        for (int i = 1; i <= 25; i++) {
+            numeros.Add(i);
+        }
+        
+        Console.WriteLine("Todos os elementos:");
+        foreach (int num in numeros) {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+        
+        Console.WriteLine("Todos os elementos em ordem invertida:");
+        numeros.Reverse();
+        foreach (int num in numeros) {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+        
+        Console.WriteLine("Todos os elementos em posições ímpares:");
+        int index = 0;
+        foreach (int num in numeros) {
+            if (index % 2 != 0) {
+                Console.Write(num + " ");
+            }
+            index++;
+        }
+        Console.WriteLine();
+        
+        Console.WriteLine("Todos os elementos ímpares:");
+        foreach (int num in numeros) {
+            if (num % 2 != 0) {
+                Console.Write(num + " ");
+            }
+        }
+        Console.WriteLine();
+        
+        Console.WriteLine("Apenas os elementos da primeira metade do vetor:");
+        int count = 0;
+        foreach (int num in numeros) {
+            if (count < numeros.Count / 2) {
+                Console.Write(num + " ");
+                count++;
+            } else {
+                break;
+            }
+        }
+        Console.WriteLine();
+    }
+}
+*/
