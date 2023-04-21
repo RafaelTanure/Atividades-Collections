@@ -1,0 +1,43 @@
+using System;
+using System.Collections;
+
+public int SomaElementos(ArrayList colecao)
+{
+    int soma = 0;
+    foreach(int elemento in colecao)
+    {
+        soma += elemento;
+    }
+    return soma;
+}
+
+/*
+//Utilizando Queue: 
+
+using System.Collections;
+
+public int SomaElementos(Queue colecao)
+{
+    int soma = 0;
+    while (colecao.Count > 0)
+    {
+        int elemento = (int) colecao.Dequeue();
+        soma += elemento;
+    }
+    return soma;
+}
+
+// Utilizando Stack:
+
+using System.Collections;
+
+public int SomaElementos(Stack colecao)
+{
+    int soma = 0;
+    while (colecao.Count > 0)
+    {
+        int elemento = (int) colecao.Pop();
+        soma += elemento;
+    }
+    return soma;
+} */
