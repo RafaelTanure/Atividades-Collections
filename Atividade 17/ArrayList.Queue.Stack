@@ -1,0 +1,132 @@
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Cria uma lista com alguns elementos
+        ArrayList lista = new ArrayList();
+        lista.Add(2);
+        lista.Add(5);
+        lista.Add(2);
+        lista.Add(8);
+        lista.Add(2);
+        lista.Add(3);
+
+        // Pede para o usuário informar o elemento que deseja contar
+        Console.WriteLine("Informe o elemento que deseja contar:");
+        int elemento = int.Parse(Console.ReadLine());
+
+        // Chama a função para contar o número de ocorrências do elemento na lista
+        int ocorrencias = ContarOcorrencias(lista, elemento);
+
+        // Exibe o resultado para o usuário
+        Console.WriteLine("O elemento {0} ocorre {1} vezes na lista.", elemento, ocorrencias);
+    }
+
+    static int ContarOcorrencias(ArrayList colecao, object elemento)
+    {
+        int contador = 0;
+        foreach (object item in colecao)
+        {
+            if (item.Equals(elemento))
+            {
+                contador++;
+            }
+        }
+        return contador;
+    }
+}
+/*
+// Atividade 17 Queue : 
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Cria uma fila com alguns elementos
+        Queue fila = new Queue();
+        fila.Enqueue(2);
+        fila.Enqueue(5);
+        fila.Enqueue(2);
+        fila.Enqueue(8);
+        fila.Enqueue(2);
+        fila.Enqueue(3);
+
+        // Pede para o usuário informar o elemento que deseja contar
+        Console.WriteLine("Informe o elemento que deseja contar:");
+        int elemento = int.Parse(Console.ReadLine());
+
+        // Chama a função para contar o número de ocorrências do elemento na fila
+        int ocorrencias = ContarOcorrencias(fila, elemento);
+
+        // Exibe o resultado para o usuário
+        Console.WriteLine("O elemento {0} ocorre {1} vezes na fila.", elemento, ocorrencias);
+    }
+
+    static int ContarOcorrencias(Queue colecao, object elemento)
+    {
+        int contador = 0;
+        int tamanho = colecao.Count;
+        for (int i = 0; i < tamanho; i++)
+        {
+            object item = colecao.Dequeue();
+            colecao.Enqueue(item);
+            if (item.Equals(elemento))
+            {
+                contador++;
+            }
+        }
+        return contador;
+    }
+}
+
+// Atividade 17 Stack: 
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Cria uma pilha com alguns elementos
+        Stack pilha = new Stack();
+        pilha.Push(2);
+        pilha.Push(5);
+        pilha.Push(2);
+        pilha.Push(8);
+        pilha.Push(2);
+        pilha.Push(3);
+
+        // Pede para o usuário informar o elemento que deseja contar
+        Console.WriteLine("Informe o elemento que deseja contar:");
+        int elemento = int.Parse(Console.ReadLine());
+
+        // Chama a função para contar o número de ocorrências do elemento na pilha
+        int ocorrencias = ContarOcorrencias(pilha, elemento);
+
+        // Exibe o resultado para o usuário
+        Console.WriteLine("O elemento {0} ocorre {1} vezes na pilha.", elemento, ocorrencias);
+    }
+
+    static int ContarOcorrencias(Stack colecao, object elemento)
+    {
+        int contador = 0;
+        int tamanho = colecao.Count;
+        for (int i = 0; i < tamanho; i++)
+        {
+            object item = colecao.Pop();
+            if (item.Equals(elemento))
+            {
+                contador++;
+            }
+            colecao.Push(item);
+        }
+        return contador;
+    }
+} */ 
